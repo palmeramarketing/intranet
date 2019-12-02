@@ -173,11 +173,11 @@
     </div>
 </div>
 
-
+{{-- 
 <div class="page-header text-center">
     <span class="display-1 ml-auto mr-auto">Estadisticas del individuo</span>
 </div>
-
+ --}}
 
 
 @endsection

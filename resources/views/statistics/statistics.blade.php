@@ -63,7 +63,7 @@
 
         </div>--}}
 
-    {{ $evaluationData['evaluations'][Auth::user()->email]['admin']['question5'] }}
+    {{-- {{ $evaluationData['data'][Auth::user()->email]['admin']['question5'] }} --}}
 @endsection
 
 @php 
@@ -458,6 +458,18 @@
 
        
     
+</script>
+
+
+
+<script>
+    window.onload = function()
+    {
+        var container = document.getElementById('container-loader');
+
+        container.style.visibility = 'hidden';
+        container.style.opacity = '0';
+}
 </script>
 
 @endsection

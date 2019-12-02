@@ -351,20 +351,40 @@
                                 {{ trans('global.reward') }}
                             </a>
                         @endif
+
+                        @if(Auth::user()->type == 3)
                         <a href="{{ route('administrator') }}" class="dropdown-item text-uppercase">
-                            <i class="material-icons">supervised_user_circle</i>Administrador
+                            <i class="material-icons">
+                                supervised_user_circle
+                            </i>
+                            {{ trans('global.admin') }}
                         </a>
+
                         <a href="{{ route('question') }}" class="dropdown-item text-uppercase">
-                            <i class="material-icons">help</i>Questions
+                            <i class="material-icons">
+                                help
+                            </i>
+                            {{ trans('global.questions') }}
                         </a>
-                        {{-- <a href="{{ route('carousel') }}" class="dropdown-item text-uppercase">
-                            <i class="material-icons">add_photo_alternate</i>
+                        @endif
+
+                        {{--
+                        <a href="{{ route('carousel') }}" class="dropdown-item text-uppercase">
+                            <i class="material-icons">
+                                add_photo_alternate
+                            </i>
                             Slider
-                        </a> --}}
+                        </a>
+                        --}}
+                        
+                        {{-- 
                         <a href="{{ route('wallet') }}" class="dropdown-item text-uppercase">
-                            <i class="material-icons">credit_card</i>
+                            <i class="material-icons">
+                                credit_card
+                            </i>
                             {{ trans('global.wallet') }}
                         </a>
+                         --}}
                         <a class="dropdown-item text-uppercase" href="{{ route('profile') }}">
                             <i class="material-icons">
                                 face
